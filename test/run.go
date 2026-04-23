@@ -77,15 +77,34 @@ import (
 // 	fmt.Println(piscine.IsCapitalized(""))
 // }
 
-func main() {
-    fmt.Println(piscine.Itoa(12345))
-    fmt.Println(piscine.Itoa(0))
-    fmt.Println(piscine.Itoa(-1234))
-    fmt.Println(piscine.Itoa(987654321))
-}
+// func main() {
+//     fmt.Println(piscine.Itoa(12345))
+//     fmt.Println(piscine.Itoa(0))
+//     fmt.Println(piscine.Itoa(-1234))
+//     fmt.Println(piscine.Itoa(987654321))
+// }
 
 // func main() {
 // 	fmt.Print(piscine.LastWord("this        ...       is sparta, then again, maybe    not"))
 // 	fmt.Print(piscine.LastWord(" lorem,ipsum "))
 // 	fmt.Print(piscine.LastWord(" "))
 // }
+
+// func main() {
+// 	fmt.Print(piscine.ThirdTimeIsACharm("123456789"))
+// 	fmt.Print(piscine.ThirdTimeIsACharm(""))
+// 	fmt.Print(piscine.ThirdTimeIsACharm("a b c d e f"))
+// 	fmt.Print(piscine.ThirdTimeIsACharm("12"))
+// }
+
+// func main() {
+// 	fmt.Println(piscine.WeAreUnique("foo", "boo"))
+// 	fmt.Println(piscine.WeAreUnique("", ""))
+// 	fmt.Println(piscine.WeAreUnique("abc", "def"))
+// }
+
+func main() {
+	fmt.Println(piscine.ZipString("YouuungFellllas"))
+	fmt.Println(piscine.ZipString("Thee quuick browwn fox juumps over the laaazy dog"))
+	fmt.Println(piscine.ZipString("Helloo Therre!"))
+}

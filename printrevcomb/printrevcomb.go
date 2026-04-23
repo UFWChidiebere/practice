@@ -1,4 +1,5 @@
 package main
+
 // Write a program that prints in descending order on a single line all unique combinations of three different digits so that the first digit is greater than the second and the second is greater than the third.
 
 // These combinations are separated by a comma and a space.
@@ -13,25 +14,47 @@ package main
 
 // 789 should not be shown because the first digit is not greater than the second.
 
-
 import (
-	"fmt"
+	// "fmt"
+
+	"github.com/01-edu/z01"
 )
+
+// func main() {
+// 	first := true
+
+// 	for i := 9; i >= 0; i-- {
+// 		for j := i - 1; j >= 0; j-- {
+// 			for k := j - 1; k >= 0; k-- {
+// 				if !first {
+// 					fmt.Print(", ")
+// 				}
+// 				fmt.Printf("%d%d%d", i, j, k)
+// 				first = false
+// 			}
+// 		}
+// 	}
+
+// 	fmt.Println()
+// }
 
 func main() {
 	first := true
 
-	for i := 9; i >= 0; i-- {
-		for j := i - 1; j >= 0; j-- {
-			for k := j - 1; k >= 0; k-- {
+	for i := '9'; i >= '2'; i-- {
+		for j := i - 1; j >= '1'; j-- {
+			for k := j - 1; k >= '0'; k-- {
 				if !first {
-					fmt.Print(", ")
+					z01.PrintRune('.')
+					z01.PrintRune(' ')
 				}
-				fmt.Printf("%d%d%d", i, j, k)
+				z01.PrintRune(i)
+				z01.PrintRune(j)
+				z01.PrintRune(k)
+
 				first = false
 			}
 		}
 	}
-
-	fmt.Println()
+	z01.PrintRune('\n')
 }

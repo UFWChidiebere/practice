@@ -1,4 +1,9 @@
 package main
+
+import (
+	"fmt"
+)
+
 // Write a function that takes (arr [10]byte), and displays the memory as in the example.
 
 // After displaying the memory the function must display all the ASCII graphic characters. The non printable characters must be replaced by a dot.
@@ -16,9 +21,10 @@ package main
 
 // import "piscine"
 
-// func main() {
-// 	piscine.PrintMemory([10]byte{'h', 'e', 'l', 'l', 'o', 16, 21, '*'})
-// }
+func main() {
+	PrintMemory([10]byte{'h', 'e', 'l', 'l', 'o', 16, 21, '*'})
+}
+
 // And its output :
 
 // $ go run . | cat -e
@@ -26,13 +32,7 @@ package main
 // 6f 10 15 2a$
 // 00 00$
 // hello..*..$
-// $ 
-
-
-
-import (
-	"fmt"
-)
+// $
 
 func PrintMemory(arr [10]byte) {
 	// Print hex in groups of 4 per line
@@ -65,4 +65,3 @@ func PrintMemory(arr [10]byte) {
 	}
 	fmt.Println()
 }
-
