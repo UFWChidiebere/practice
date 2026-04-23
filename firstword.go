@@ -57,3 +57,32 @@ func FirstWord(s string) string {
 
 	return s[start:i] + "\n"
 }
+
+// func LastWord(s string) string {
+// 	if len(s) == 0 {
+// 		return "\n"
+// 	}
+
+// 	i := len(s) - 1
+
+// 	// Skip trailing spaces
+// 	for i >= 0 && s[i] == ' ' {
+// 		i--
+// 	}
+
+// 	end := i
+
+// 	// Find start of last word
+// 	for i >= 0 && s[i] != ' ' {
+// 		i--
+// 	}
+
+// 	start := i + 1
+
+// 	// If no word found
+// 	if start > end {
+// 		return "\n"
+// 	}
+
+// 	return s[start:end+1] + "\n"
+// }
