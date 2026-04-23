@@ -29,7 +29,7 @@ package piscine
 // B
 // CD
 // EDF
-// Spwwz+bz
+// Spwwz+bz}wo
 
 
 func HashCode(dec string) string {
@@ -50,3 +50,7 @@ func HashCode(dec string) string {
 
 	return string(result)
 }
+
+
+
+
