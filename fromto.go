@@ -1,4 +1,5 @@
 package piscine
+
 // Write a function that takes two integers and returns a string showing the range of numbers from the first to the second.
 
 // The numbers must be separated by a comma and a space.
@@ -33,25 +34,69 @@ package piscine
 // 10$
 // Invalid$
 
+// func FromTo(from int, to int) string {
+// 	// Validate input
+// 	if from < 0 || to < 0 || from > 99 || to > 99 {
+// 		return "Invalid\n"
+// 	}
+
+// 	result := ""
+
+// 	for i := from; i <= to; i++ {
+// 		// Format number with leading zero if needed
+// 		if i < 10 {
+// 			result += "0"
+// 		}
+// 		result += string('0'+i/10) + string('0'+i%10)
+
+// 		// Add separator if not last element
+// 		if i != to {
+// 			result += ", "
+// 		}
+// 	}
+
+// 	result += "\n"
+// 	return result
+// }
+
 func FromTo(from int, to int) string {
-	// Validate input
 	if from < 0 || to < 0 || from > 99 || to > 99 {
 		return "Invalid\n"
 	}
 
 	result := ""
+	if from > to {
 
-	for i := from; i <= to; i++ {
-		// Format number with leading zero if needed
-		if i < 10 {
-			result += "0"
-		}
-		result += string('0'+i/10) + string('0'+i%10)
+		for i := from; i >= to; i-- {
+			if i < 10 {
+				result += "0" + string(rune(i+'0'))
+			} else {
+				tens := i / 10
+				units := i % 10
 
-		// Add separator if not last element
-		if i != to {
-			result += ", "
+				result += string(rune('0'+tens)) + string(rune('0'+units))
+			}
+
+			if i != to {
+				result += ", "
+			}
 		}
+	} else {
+		for i := from; i <= to; i++ {
+			if i < 10 {
+				result += "0" + string(rune(i+'0'))
+			} else {
+				tens := i / 10
+				units := i % 10
+
+				result += string(rune('0'+tens)) + string(rune('0'+units))
+			}
+
+			if i != to {
+				result += ", "
+			}
+		}
+
 	}
 
 	result += "\n"

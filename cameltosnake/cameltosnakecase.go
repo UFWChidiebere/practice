@@ -1,4 +1,4 @@
-package piscine
+package main
 
 // Write a function that converts a string from camelCase to snake_case.
 
@@ -23,18 +23,18 @@ package piscine
 
 // package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
-// func main() {
-// 	fmt.Println(CamelToSnakeCase("HelloWorld"))
-// 	fmt.Println(CamelToSnakeCase("helloWorld"))
-// 	fmt.Println(CamelToSnakeCase("camelCase"))
-// 	fmt.Println(CamelToSnakeCase("CAMELtoSnackCASE"))
-// 	fmt.Println(CamelToSnakeCase("camelToSnakeCase"))
-// 	fmt.Println(CamelToSnakeCase("hey2"))
-// }
+func main() {
+	fmt.Println(CamelToSnakeCase("HelloWorld"))
+	fmt.Println(CamelToSnakeCase("helloWorld"))
+	fmt.Println(CamelToSnakeCase("camelCase"))
+	fmt.Println(CamelToSnakeCase("CAMELtoSnackCASE"))
+	fmt.Println(CamelToSnakeCase("camelToSnakeCase"))
+	fmt.Println(CamelToSnakeCase("hey2"))
+}
 // And its output:
 
 // $ go run .
@@ -46,45 +46,35 @@ package piscine
 // hey2
 
 func CamelToSnakeCase(s string) string {
-	if s == "" {
+	if len(s) == 0 {
 		return ""
 	}
 
-	// validate camelCase rules
-	for i, ch := range s {
-		// only letters allowed
-		if !(ch >= 'a' && ch <= 'z') && !(ch >= 'A' && ch <= 'Z') {
+	if s[len(s)-1] >= 'A' && s[len(s)-1] <= 'Z' { // check if the last letter is uppercase
+		return s
+	}
+
+	for i := 0; i < len(s); i++ {
+		if i > 0 && s[i] >= 'A' && s[i] <= 'Z' && s[i-1] >= 'A' && s[i-1] <= 'Z' { // check if two uppercase are next to each other
 			return s
 		}
-
-		// must not end with uppercase
-		if i == len(s)-1 && ch >= 'A' && ch <= 'Z' {
+		if !(s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z') { // check for anything other than a letter
 			return s
-		}
-
-		// no consecutive uppercase letters
-		if i > 0 {
-			prev := rune(s[i-1])
-			if ch >= 'A' && ch <= 'Z' && prev >= 'A' && prev <= 'Z' {
-				return s
-			}
 		}
 	}
 
-	result := []rune{}
+	res := ""
+	for i := 0; i < len(s); i++ {
+		ch := s[i]
 
-	for i, ch := range s {
 		if ch >= 'A' && ch <= 'Z' {
-			// add underscore before uppercase (except first char)
 			if i != 0 {
-				result = append(result, '_')
+				res += "_"
 			}
-			// convert to lowercase
-			result = append(result, ch+'a'-'A')
+			res += string(ch)
 		} else {
-			result = append(result, ch)
+			res += string(ch)
 		}
 	}
-
-	return string(result)
+	return res
 }

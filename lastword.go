@@ -1,4 +1,5 @@
 package piscine
+
 // Write a function LastWord that takes a string and returns its last word followed by a \n.
 
 // A word is a section of string delimited by spaces or by the start/end of the string.
@@ -29,28 +30,57 @@ package piscine
 // $
 // $
 // Notions
-// 01-edu/z01 
+// 01-edu/z01
+
+// func LastWord(s string) string {
+// 	end := len(s) - 1
+
+// 	// skip trailing spaces
+// 	for end >= 0 && s[end] == ' ' {
+// 		end--
+// 	}
+
+// 	// if no word found
+// 	if end < 0 {
+// 		return "\n"
+// 	}
+
+// 	start := end
+
+// 	// move backwards to find start of last word
+// 	for start >= 0 && s[start] != ' ' {
+// 		start--
+// 	}
+
+// 	// slice and add newline
+// 	return s[start+1:end+1] + "\n"
+// }
 
 func LastWord(s string) string {
-	end := len(s) - 1
-
-	// skip trailing spaces
-	for end >= 0 && s[end] == ' ' {
-		end--
-	}
-
-	// if no word found
-	if end < 0 {
+	if len(s) == 0 {
 		return "\n"
 	}
 
-	start := end
+	i := len(s) - 1
 
-	// move backwards to find start of last word
-	for start >= 0 && s[start] != ' ' {
-		start--
+	// Skip trailing spaces
+	for i >= 0 && s[i] == ' ' {
+		i--
 	}
 
-	// slice and add newline
-	return s[start+1:end+1] + "\n"
+	end := i
+
+	// Find start of last word
+	for i >= 0 && s[i] != ' ' {
+		i--
+	}
+
+	start := i + 1
+
+	// If no word found
+	if start > end {
+		return "\n"
+	}
+
+	return s[start:end+1] + "\n"
 }

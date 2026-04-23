@@ -35,29 +35,47 @@ package piscine
 // Notions
 // strconv/Itoa
 
+// func Itoa(n int) string {
+// 	if n == 0 {
+// 		return "0"
+// 	}
 
+// 	isNegative := false
+// 	if n < 0 {
+// 		isNegative = true
+// 		n = -n
+// 	}
+
+// 	result := ""
+
+// 	for n > 0 {
+// 		digit := n % 10
+// 		result = string('0'+digit) + result
+// 		n /= 10
+// 	}
+
+// 	if isNegative {
+// 		result = "-" + result
+// 	}
+
+//		return result
+//	}
 func Itoa(n int) string {
 	if n == 0 {
 		return "0"
 	}
 
-	isNegative := false
+	sign := ""
 	if n < 0 {
-		isNegative = true
+		sign = "-"
 		n = -n
 	}
 
-	result := ""
-
+	res := ""
 	for n > 0 {
-		digit := n % 10
-		result = string('0'+digit) + result
+		res = string('0'+n%10) + res
 		n /= 10
 	}
 
-	if isNegative {
-		result = "-" + result
-	}
-
-	return result
+	return sign + res
 }

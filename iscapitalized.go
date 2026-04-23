@@ -1,4 +1,5 @@
 package piscine
+
 // Write a function IsCapitalized() that takes a string as an argument and returns true if each word in the string begins with either an uppercase letter or a non-alphabetic character.
 
 // If any of the words begin with a lowercase letter return false.
@@ -34,33 +35,47 @@ package piscine
 // true
 // false
 
+// func IsCapitalized(s string) bool {
+// 	if len(s) == 0 {
+// 		return false
+// 	}
 
+// 	inWord := false
+
+// 	for i := 0; i < len(s); i++ {
+// 		c := s[i]
+
+// 		// Detect start of a word
+// 		if c != ' ' && !inWord {
+// 			inWord = true
+
+// 			// Check first character of the word
+// 			if c >= 'a' && c <= 'z' {
+// 				return false
+// 			}
+// 		}
+
+// 		// Detect end of a word
+// 		if c == ' ' {
+// 			inWord = false
+// 		}
+// 	}
+
+// 	return true
+// }
 
 func IsCapitalized(s string) bool {
-	if len(s) == 0 {
-		return false
-	}
-
 	inWord := false
 
 	for i := 0; i < len(s); i++ {
-		c := s[i]
-
-		// Detect start of a word
-		if c != ' ' && !inWord {
-			inWord = true
-
-			// Check first character of the word
-			if c >= 'a' && c <= 'z' {
+		if s[i] != ' ' && !inWord {
+			if s[i] >= 'a' && s[i] <= 'z' {
 				return false
 			}
-		}
-
-		// Detect end of a word
-		if c == ' ' {
+			inWord = true
+		} else if s[i] == ' ' {
 			inWord = false
 		}
 	}
-
-	return true
+	return len(s) > 0
 }
