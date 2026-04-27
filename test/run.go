@@ -103,8 +103,15 @@ import (
 // 	fmt.Println(piscine.WeAreUnique("abc", "def"))
 // }
 
+// func main() {
+// 	fmt.Println(piscine.ZipString("YouuungFellllas"))
+// 	fmt.Println(piscine.ZipString("Thee quuick browwn fox juumps over the laaazy dog"))
+// 	fmt.Println(piscine.ZipString("Helloo Therre!"))
+// }
+
 func main() {
-	fmt.Println(piscine.ZipString("YouuungFellllas"))
-	fmt.Println(piscine.ZipString("Thee quuick browwn fox juumps over the laaazy dog"))
-	fmt.Println(piscine.ZipString("Helloo Therre!"))
+	fmt.Println(piscine.RetainFirstHalf("This is the 1st halfThis is the 2nd half"))
+	fmt.Println(piscine.RetainFirstHalf("A"))
+	fmt.Println(piscine.RetainFirstHalf(""))
+	fmt.Println(piscine.RetainFirstHalf("Hello World"))
 }

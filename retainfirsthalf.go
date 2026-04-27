@@ -32,29 +32,29 @@ package piscine
 // A$
 // $
 // Hello$
-func RetainFirstHalf(str string) string {
-	length := len(str)
+// func RetainFirstHalf(str string) string {
+// 	length := len(str)
 
-	if length == 0 {
-		return ""
-	}
+// 	if length == 0 {
+// 		return ""
+// 	}
 
-	if length == 1 {
-		return str
-	}
+// 	if length == 1 {
+// 		return str
+// 	}
 
-	half := length / 2
-	return str[:half]
-}
+// 	half := length / 2
+// 	return str[:half]
+// }
 
 
 // package piscine 
 
-// func RetainFirstHalf(str string) string {
-// 	n := len(str)
+func RetainFirstHalf(str string) string {
+	n := len(str)
 
-// 	if n <= 1 {
-// 		return str
-// 	}
-// 	return str[:n\2]
-// }
+	if n <= 1 {
+		return str
+	}
+	return str[:n/2]
+}
