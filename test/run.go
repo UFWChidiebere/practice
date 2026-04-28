@@ -56,16 +56,16 @@ import (
 // 	fmt.Println(piscine.RepeatAlpha("abacadaba 01!"))
 // }
 
-// func main() {
-// 	fmt.Println(piscine.FindPrevPrime(5))
-// 	fmt.Println(piscine.FindPrevPrime(4))
-// }
+func main() {
+	fmt.Println(piscine.FindPrevPrime(5))
+	fmt.Println(piscine.FindPrevPrime(4))
+}
 
 // func main() {
-	// fmt.Print(piscine.FromTo(1, 10))
-	// fmt.Print(piscine.FromTo(10, 1))
-	// fmt.Print(piscine.FromTo(10, 10))
-	// fmt.Print(piscine.FromTo(100, 10))
+// 	fmt.Print(piscine.FromTo(1, 10))
+// 	fmt.Print(piscine.FromTo(10, 1))
+// 	fmt.Print(piscine.FromTo(10, 10))
+// 	fmt.Print(piscine.FromTo(100, 10))
 // }
 
 // func main() {
@@ -109,9 +109,14 @@ import (
 // 	fmt.Println(piscine.ZipString("Helloo Therre!"))
 // }
 
-func main() {
-	fmt.Println(piscine.RetainFirstHalf("This is the 1st halfThis is the 2nd half"))
-	fmt.Println(piscine.RetainFirstHalf("A"))
-	fmt.Println(piscine.RetainFirstHalf(""))
-	fmt.Println(piscine.RetainFirstHalf("Hello World"))
-}
+// func main() {
+// 	fmt.Println(piscine.RetainFirstHalf("This is the 1st halfThis is the 2nd half"))
+// 	fmt.Println(piscine.RetainFirstHalf("A"))
+// 	fmt.Println(piscine.RetainFirstHalf(""))
+// 	fmt.Println(piscine.RetainFirstHalf("Hello World"))
+// }
+
+// func main() {
+// 	fmt.Println(piscine.FindPrevPrime(5))
+// 	fmt.Println(piscine.FindPrevPrime(4))
+// }
