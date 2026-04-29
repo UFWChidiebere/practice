@@ -68,12 +68,13 @@ func IsCapitalized(s string) bool {
 	inWord := false
 
 	for i := 0; i < len(s); i++ {
-		if s[i] != ' ' && !inWord {
-			if s[i] >= 'a' && s[i] <= 'z' {
+		c := s[i]
+		if c != ' ' && !inWord {
+			if c >= 'a' && c <= 'z' {
 				return false
 			}
 			inWord = true
-		} else if s[i] == ' ' {
+		} else if c == ' ' {
 			inWord = false
 		}
 	}
