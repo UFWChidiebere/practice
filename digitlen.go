@@ -31,29 +31,51 @@ package piscine
 // 2$
 // -1$
 
+// func DigitLen(n, base int) int {
+// 	// validate base
+// 	if base < 2 || base > 36 {
+// 		return -1
+// 	}
+
+// 	// handle negative n
+// 	if n < 0 {
+// 		n = -n
+// 	}
+
+// 	// special case: n == 0
+// 	if n == 0 {
+// 		return 1
+// 	}
+
+// 	count := 0
+// 	for n > 0 {
+// 		n /= base
+// 		count++
+// 	}
+
+// 	return count
+// }
+
+// package piscine
+
 func DigitLen(n, base int) int {
-	// validate base
 	if base < 2 || base > 36 {
 		return -1
 	}
 
-	// handle negative n
-	if n < 0 {
-		n = -n
-	}
-
-	// special case: n == 0
+	// Special case for 0
 	if n == 0 {
 		return 1
 	}
 
 	count := 0
-	for n > 0 {
+
+	// Work directly with n to avoid overflow from -MinInt
+	for n != 0 {
 		n /= base
 		count++
 	}
 
 	return count
 }
-
 

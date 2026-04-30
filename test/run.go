@@ -35,12 +35,12 @@ import (
 // 	fmt.Println(piscine.Gcd(17, 3))
 // }
 
-// func main() {
-// 	fmt.Println(piscine.HashCode("A"))
-// 	fmt.Println(piscine.HashCode("AB"))
-// 	fmt.Println(piscine.HashCode("BAC"))
-// 	fmt.Println(piscine.HashCode("Hello World"))
-// }
+func main() {
+	fmt.Println(piscine.HashCode("A"))
+	fmt.Println(piscine.HashCode("AB"))
+	fmt.Println(piscine.HashCode("BAC"))
+	fmt.Println(piscine.HashCode("Hello World"))
+}
 
 // func main() {
 // 	fmt.Println(piscine.HashCode("A"))
@@ -68,14 +68,14 @@ import (
 // 	fmt.Print(piscine.FromTo(100, 10))
 // }
 
-func main() {
-	fmt.Println(piscine.IsCapitalized("Hello! How are you?"))
-	fmt.Println(piscine.IsCapitalized("Hello How Are You"))
-	fmt.Println(piscine.IsCapitalized("Whats 4this 100K?"))
-	fmt.Println(piscine.IsCapitalized("Whatsthis4"))
-	fmt.Println(piscine.IsCapitalized("!!!!Whatsthis4"))
-	fmt.Println(piscine.IsCapitalized(""))
-}
+// func main() {
+// 	fmt.Println(piscine.IsCapitalized("Hello! How are you?"))
+// 	fmt.Println(piscine.IsCapitalized("Hello How Are You"))
+// 	fmt.Println(piscine.IsCapitalized("Whats 4this 100K?"))
+// 	fmt.Println(piscine.IsCapitalized("Whatsthis4"))
+// 	fmt.Println(piscine.IsCapitalized("!!!!Whatsthis4"))
+// 	fmt.Println(piscine.IsCapitalized(""))
+// }
 
 // func main() {
 //     fmt.Println(piscine.Itoa(12345))
@@ -88,6 +88,7 @@ func main() {
 // 	fmt.Print(piscine.LastWord("this        ...       is sparta, then again, maybe    not"))
 // 	fmt.Print(piscine.LastWord(" lorem,ipsum "))
 // 	fmt.Print(piscine.LastWord(" "))
+//     fmt.Print(piscine.LastWord("this is WISDOM"))
 // }
 
 // func main() {

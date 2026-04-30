@@ -31,32 +31,54 @@ package piscine
 // hello
 // $
 
+// / func FirstWord(s string) string {
+// 	for i := 0; i < len(s); i++ {
+// 		if s[i] == ' ' {
+// 			return s[:i] + "\n"
+// 		}
+// 	}
+// 	return s + "\n"
+// }
+
 func FirstWord(s string) string {
-	if len(s) == 0 {
-		return "\n"
-	}
-
 	i := 0
-
-	// Skip leading spaces
 	for i < len(s) && s[i] == ' ' {
 		i++
 	}
-
 	start := i
-
-	// Find end of first word
 	for i < len(s) && s[i] != ' ' {
 		i++
 	}
-
-	// If no word found
-	if start == i {
-		return "\n"
-	}
-
 	return s[start:i] + "\n"
 }
+
+// func FirstWord(s string) string {
+// 	if len(s) == 0 {
+// 		return "\n"
+// 	}
+
+// 	i := 0
+
+// 	// Skip leading spaces
+// 	for i < len(s) && s[i] == ' ' {
+// 		i++
+// 	}
+
+// 	start := i
+
+// 	// Find end of first word
+// 	for i < len(s) && s[i] != ' ' {
+// 		i++
+// 	}
+
+// 	// If no word found
+// 	if start == i {
+// 		return "\n"
+// 	}
+
+// 	return s[start:i] + "\n"
+// }
+
 
 // func LastWord(s string) string {
 // 	if len(s) == 0 {
