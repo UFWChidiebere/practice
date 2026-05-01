@@ -35,12 +35,12 @@ import (
 // 	fmt.Println(piscine.Gcd(17, 3))
 // }
 
-func main() {
-	fmt.Println(piscine.HashCode("A"))
-	fmt.Println(piscine.HashCode("AB"))
-	fmt.Println(piscine.HashCode("BAC"))
-	fmt.Println(piscine.HashCode("Hello World"))
-}
+// func main() {
+// 	fmt.Println(piscine.HashCode("A"))
+// 	fmt.Println(piscine.HashCode("AB"))
+// 	fmt.Println(piscine.HashCode("BAC"))
+// 	fmt.Println(piscine.HashCode("Hello World"))
+// }
 
 // func main() {
 // 	fmt.Println(piscine.HashCode("A"))
@@ -56,10 +56,10 @@ func main() {
 // 	fmt.Println(piscine.RepeatAlpha("abacadaba 01!"))
 // }
 
-// func main() {
-// 	fmt.Println(piscine.FindPrevPrime(5))
-// 	fmt.Println(piscine.FindPrevPrime(4))
-// }
+func main() {
+	fmt.Println(piscine.FindPrevPrime(5))
+	fmt.Println(piscine.FindPrevPrime(4))
+}
 
 // func main() {
 // 	fmt.Print(piscine.FromTo(1, 10))
